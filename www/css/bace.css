@@ -1,0 +1,42 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #d4af37 rgba(8, 20, 50, 0.8);
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: rgba(8, 20, 50, 0.8); }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #d4af37, #b8860b);
+    border-radius: 5px;
+    border: 2px solid rgba(8, 20, 50, 0.8);
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    padding: 0;
+    background-color: #0a1a3c;
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+    color: #e6e8ee;
+}
+body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.5) 100%),
+                linear-gradient(160deg, rgba(10,26,60,0.82) 0%, rgba(16,42,107,0.75) 45%, rgba(30,77,156,0.70) 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
