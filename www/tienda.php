@@ -150,10 +150,15 @@ try {
 
         <?php if (!empty($personajes)): ?>
             <div class="oro-badge">
-                <?= t('your_gold') ?><br>
-                <?php foreach ($personajes as $pj): ?>
-                    <small><?= htmlspecialchars($pj['name']) ?>: <strong><?= number_format(floor($pj['money'] / COBRE_POR_ORO)) ?> <?= t('gold') ?></strong></small><br>
-                <?php endforeach; ?>
+                <div class="oro-titulo">💰 <?= t('your_gold') ?></div>
+                <ul class="oro-lista">
+                    <?php foreach ($personajes as $pj): ?>
+                        <li>
+                            <span class="oro-pj"><?= htmlspecialchars($pj['name']) ?></span>
+                            <span class="oro-cantidad"><?= number_format(floor($pj['money'] / COBRE_POR_ORO)) ?> <?= t('gold') ?></span>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
             </div>
         <?php endif; ?>
 

@@ -27,9 +27,9 @@ define('SERVER_TIMEOUT', 1);
 
 // Rutas / marca
 define('BG_IMAGE', 'img/fondo.jpg');
-define('SERVER_NAME',    'AzerothCore Server');
-define('SERVER_TAGLINE', 'Regístrate para jugar en el servidor');
-define('NOTICIAS_FILE', __DIR__ . '/noticias.json');
+if (!defined('SERVER_NAME'))    define('SERVER_NAME',    'AzerothCore Server');
+if (!defined('SERVER_TAGLINE')) define('SERVER_TAGLINE', 'Regístrate para jugar en el servidor');
+if (!defined('NOTICIAS_FILE'))  define('NOTICIAS_FILE', __DIR__ . '/noticias.json');
 
 // SOAP
 define('SOAP_HOST', '127.0.0.1');
